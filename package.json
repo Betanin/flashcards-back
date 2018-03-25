@@ -7,7 +7,7 @@
         "start": "NODE_ENV=development node src/index.js",
         "start-clustered": "NODE_ENV=development APP_CLUSTERED=true node src/index.js",
         "test": "NODE_ENV=test mocha src/**/*.test.js",
-        "test-cover": "istanbul cover _mocha $(find ./src -name \"*.test.js\" -not -path \"./node_modules/*\")"
+        "test-coverage": "istanbul cover _mocha $(find ./src -name \"*.test.js\" -not -path \"./node_modules/*\")"
     },
     "author": "Dione Betanin",
     "license": "MIT",

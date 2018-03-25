@@ -1,7 +1,7 @@
 const config = () => {
     return {
         app: {
-            port: process.env.APP_PORT || 3000,
+            port: process.env.APP_PORT || process.env.PORT || 3000,
             clustered: process.env.APP_CLUSTERED || 'false'
         },
         jwt: {

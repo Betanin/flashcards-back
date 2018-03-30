@@ -22,7 +22,11 @@ const localLoginStrategy = (jwtSecret) => new PassportLocalStrategy({
         return done(new ServerError('Incorrect password.', 403), undefined, undefined);
     
     const payload = {
-        sub: user._id
+        sub: user._id,
+        data: {
+            name: user.name,
+            email: user.email
+        }
     };
 
     const token = jwt.sign(payload, jwtSecret);
